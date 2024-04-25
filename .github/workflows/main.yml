@@ -1,0 +1,17 @@
+
+name : Hello World Test
+
+on :
+  push :
+    branches : [ "master", "develop" ]
+
+jobs :
+  hello_world_job :
+    runs-on : ubuntu-latest
+    name : A job to say hello
+    steps :
+      - uses : actions/checkout@v4
+      - id : foo
+        uses : actions/hello-world-composite-action@master
+        with :
+          who-to-greet : 'Mona the Octocat'
