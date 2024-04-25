@@ -12,6 +12,6 @@ jobs :
     steps :
       - uses : actions/checkout@v4
       - id : foo
-        uses : takahiro-itou/hello-world-composite-action@v1
+        uses : takahiro-itou/hello-world-composite-action@develop
         with :
           who-to-greet : 'Mona the Octocat'
