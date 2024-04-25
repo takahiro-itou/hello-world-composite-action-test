@@ -12,6 +12,6 @@ jobs :
     steps :
       - uses : actions/checkout@v4
       - id : foo
-        uses : actions/hello-world-composite-action@master
+        uses : actions/hello-world-composite-action@v1
         with :
           who-to-greet : 'Mona the Octocat'
