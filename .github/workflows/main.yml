@@ -21,3 +21,8 @@ jobs :
         shell : bash
         env   :
           RANDOM_NUMBER : ${{ steps.foo.outputs.random-number }}
+
+      - run : |
+          pwd
+          ls -R
+        shell : bash
