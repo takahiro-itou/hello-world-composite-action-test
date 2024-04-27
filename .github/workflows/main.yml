@@ -32,5 +32,5 @@ jobs :
       - run : |
           pwd
           ls -alR
-          md5sum -b .init/*.txt
+          md5sum -b ./init/*.txt
         shell : bash
