@@ -9,13 +9,20 @@ jobs :
   hello_world_job :
     runs-on : ubuntu-latest
     name : A job to say hello
+
+    strategy :
+      fail-fast : false
+
+      matrix :
+        who-args : [ 'Mona the Octocat', 'Second' ]
+
     steps :
       - uses : actions/checkout@v4
 
       - id : foo
         uses : takahiro-itou/hello-world-composite-action@develop
         with :
-          who-to-greet : 'Mona the Octocat'
+          who-to-greet : ${{ matrix.who-args }}
 
       - run   : echo random-number "$RANDOM_NUMBER"
         shell : bash
