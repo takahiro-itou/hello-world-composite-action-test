@@ -29,6 +29,12 @@ jobs :
         env   :
           RANDOM_NUMBER : ${{ steps.foo.outputs.random-number }}
 
+      - run   : |
+          echo common-values "${COMMON_VALUES}"
+        shell : bash
+        env   :
+          COMMON_VALUES : ${{ steps.foo.outputs.common-values }}
+
       - run : |
           pwd
           ls -alR
