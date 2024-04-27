@@ -31,9 +31,11 @@ jobs :
 
       - run   : |
           echo common-value "${COMMON_VALUE}"
+          echo cached-date  "${CACHED_DATE}"
         shell : bash
         env   :
           COMMON_VALUE : ${{ steps.foo.outputs.common-value }}
+          CACHED_DATE  : ${{ steps.foo.outputs.cached-date }}
 
       - run : |
           pwd
