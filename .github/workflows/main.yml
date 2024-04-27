@@ -31,5 +31,5 @@ jobs :
 
       - run : |
           pwd
-          ls -R
+          ls -alR
         shell : bash
